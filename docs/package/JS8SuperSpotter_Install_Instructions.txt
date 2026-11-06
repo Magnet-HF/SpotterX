@@ -1,0 +1,92 @@
+================================================================================
+SPOTTERX (MagNet Edition) - INSTALL INSTRUCTIONS
+================================================================================
+
+
+--------------------------------------------------------------------------------
+1. INSTALL PYTHON (if not already installed)
+--------------------------------------------------------------------------------
+Get it from https://python.org
+During install, check the box "Add Python to PATH" - this matters, don't skip it.
+
+
+--------------------------------------------------------------------------------
+2. INSTALL THE REQUIRED PACKAGES
+--------------------------------------------------------------------------------
+Open SpotterX folder double click Install.py
+or
+Open Command Prompt (Windows) or Terminal (Mac/Linux) and run:
+
+    pip install requests pillow meshcore simpleaudio
+
+  - requests  -> required (grid lookups, offline map tile downloads)
+  - pillow    -> required (map tiles, marker images)
+  - simpleaudio -> optional (sound alerts only). If it fails to install,
+    skip it - the app already handles that gracefully and just runs
+    without sound alerts.
+  - meshcore
+
+
+If you only want the two truly required packages:
+
+    pip install requests pillow meshcore 
+ 
+   or
+
+  - pip install -r requirements.txt
+
+
+--------------------------------------------------------------------------------
+3. GET THE SPOTTERX FOLDER
+--------------------------------------------------------------------------------
+Unzip the SuperSpotter folder wherever you want to run it from. Inside you'll
+find js8spotter.py, fcc_grid_lookup.py, the tiles_na/tiles_dark_na map tile
+folders, and js8spotter.db.blank (the empty database template).
+
+Do NOT delete js8spotter.db.blank - the app needs it to build your first
+database on the very first launch.
+
+
+--------------------------------------------------------------------------------
+4. FIRST LAUNCH
+--------------------------------------------------------------------------------
+Run js8spotter.py (double-click it, or from a terminal: python js8spotter.py).
+
+On first launch with no existing js8spotter.db, the app automatically builds
+one from the blank template - you'll get a clean, empty database. Go to
+Settings and set your own Callsign and Grid.
+
+If you'd rather NOT start from scratch and want your existing history
+instead, see the next section.
+
+
+--------------------------------------------------------------------------------
+5. OPTIONAL: BRING OVER YOUR EXISTING js8spotter.db
+--------------------------------------------------------------------------------
+If you already have a working js8spotter.db from a previous SpotterX
+install (your own SFM messages, grid history, roster, map pins, settings,
+etc.) and want to keep using it instead of starting fresh:
+
+  1. Close SpotterX if it's running.
+  2. Copy your OLD js8spotter.db file directly into the new SuperSpotter
+     folder, replacing/sitting alongside js8spotter.db.blank (do NOT
+     overwrite the .blank file itself - only add/replace js8spotter.db).
+  3. Launch JS8SuperSpotter.
+
+What happens: the app detects your existing database already has data in
+it, so the "build from blank template" step is skipped entirely - it just
+uses your database as-is. All your old messages, grid history, and settings
+carry over.
+
+The app will then automatically run its schema migration check on that
+older database - adding any new columns/tables it needs (map_pins, roster, etc.) that your older database
+predates. This is safe and non-destructive - it only ADDS what's missing,
+never removes or changes your existing data.
+
+You do not need to do anything else. No manual database editing, no SQL,
+no separate migration step - just drop the file in and launch.
+
+
+================================================================================
+End of instructions.
+================================================================================
