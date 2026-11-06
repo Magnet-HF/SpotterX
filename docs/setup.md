@@ -2,7 +2,7 @@
 
 ## Download
 
-Use the repository's Releases page once the verified copy is published. During transition, use the [legacy MagNet SpotterX release](https://github.com/Magnet-HF/Mag-Windows/releases/tag/SpotterX-v4.0).
+Download the package from [SpotterX Releases](https://github.com/Magnet-HF/SpotterX/releases). The [original Mag-Windows release](https://github.com/Magnet-HF/Mag-Windows/releases/tag/SpotterX-v4.0) remains available.
 
 ## Compatibility status
 

@@ -8,7 +8,7 @@ A companion to JS8Call for mapping, messages, forms, and station awareness. **MA
 
 ## Project status
 
-This repository establishes the dedicated project home. The original MagNet package is available at the [legacy SpotterX-v4.0 release](https://github.com/Magnet-HF/Mag-Windows/releases/tag/SpotterX-v4.0) until its verified copy is published here. Existing download URLs will remain available.
+Download current packages from [SpotterX Releases](https://github.com/Magnet-HF/SpotterX/releases). The v4.0 ZIP matches the original [Mag-Windows release](https://github.com/Magnet-HF/Mag-Windows/releases/tag/SpotterX-v4.0), which remains available.
 
 ## Capabilities
 
